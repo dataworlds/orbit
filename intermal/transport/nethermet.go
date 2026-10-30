@@ -34,6 +34,7 @@ func Run(addr string, OnSpawn func(p player.Player)) {
 			OnSpawn(player.Player{})
 		}
 
-		_ = conn
+		conn.(*nethernet.Conn).Latency()
+
 	}
 }

@@ -14,6 +14,8 @@ func test(p player.Player) {
 func main() {
 	server := orbit.New()
 
+	server.Command("test", func() {})
+
 	server.OnSpawn = test
 
 	server.Listen(":19132")
