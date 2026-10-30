@@ -1,6 +1,7 @@
 package orbit
 
 import (
+	"github.com/dataworlds/orbit/intermal/transport"
 	"github.com/dataworlds/orbit/player"
 )
 
@@ -13,8 +14,5 @@ func New() *server {
 }
 
 func (server *server) Listen(addr string) {
-	if server.OnSpawn != nil {
-		server.OnSpawn(player.Player{})
-	}
-
+	transport.Run(addr, server.OnSpawn)
 }

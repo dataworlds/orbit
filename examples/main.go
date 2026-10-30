@@ -16,5 +16,5 @@ func main() {
 
 	server.OnSpawn = test
 
-	server.Listen("19132")
+	server.Listen(":19132")
 }
