@@ -1,8 +1,6 @@
 package orbit
 
 import (
-	"fmt"
-
 	"github.com/dataworlds/orbit/player"
 )
 
@@ -14,7 +12,9 @@ func New() *server {
 	return &server{}
 }
 
-func (*server) Listen(addr string) {
-	fmt.Println("working")
+func (server *server) Listen(addr string) {
+	if server.OnSpawn != nil {
+		server.OnSpawn(player.Player{})
+	}
 
 }

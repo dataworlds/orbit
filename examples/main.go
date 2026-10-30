@@ -1,12 +1,14 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/dataworlds/orbit"
 	"github.com/dataworlds/orbit/player"
 )
 
 func test(p player.Player) {
-
+	fmt.Println("Onspawn working")
 }
 
 func main() {
